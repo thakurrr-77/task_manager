@@ -358,7 +358,7 @@ function TaskModal({
 }: {
     task?: Task;
     onClose: () => void;
-    onSubmit: (data: CreateTaskData | UpdateTaskData) => void;
+    onSubmit: (data: CreateTaskData) => Promise<void> | void;
 }) {
     const [title, setTitle] = useState(task?.title || '');
     const [description, setDescription] = useState(task?.description || '');
